@@ -5,12 +5,12 @@ Minimalistic template to base prototypes and small projects on without worrying 
 ## Things to remember to adjust when using as a template:
 
 - vite.config.js
-  - **base** especially if updating packages
+  - ~~**base** especially if updating packages~~
 - package.json
-  - **"name"**
+  - ~~**"name"**~~
 - Index.html
-  - **Title**
-  - **Description**
+  - ~~**Title**~~
+  - ~~**Description**~~
   - **Favicon**
 - GameEngine.svelte
   - getMilestones
@@ -23,7 +23,7 @@ Minimalistic template to base prototypes and small projects on without worrying 
   - Display meta data for save instead of ???
   - Display game title
 - game-config.js
-  - adjust all settings, most importantly `title` and `state.savePrefix`
+  - adjust all settings, most importantly ~~`title` and `state.savePrefix`~~
 - init.js
   - register tooltips, dialogs processors
 - SettingWatcher.svelte

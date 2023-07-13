@@ -1,21 +1,21 @@
 const GAME_CONFIG = {
-    title : "Game title", //important!
+    title : "RGB Generator", //important!
     
     state: {
         defaultState : Object.freeze({
         }),
 
-        savePrefix: "Svelte_Game", //important!
+        savePrefix: "Generator", //important!
         saveVersion: 1,
     
         // autosave on important actions
         actionsaveActive: true,
         // important events to autosave game shortly after
-        actionsaveEvents: ["bar-maxed"],
+        actionsaveEvents: [],
         // important events to create a backup before
         autobackupEvents: [],
         
-        autosaveInterval: 60000,    //settings.autosaveInterval
+        autosaveInterval: 10000,    //settings.autosaveInterval
         // minimum time between saves (with actionsaves)
         minimumInterval: 2000,
     },
@@ -25,7 +25,7 @@ const GAME_CONFIG = {
         maxStepTime: 60,
         rate : 30,      //settings.dataFPS
         boost : 1,
-        svelteTickEveryStep : true,
+        svelteTickEveryStep : false,
     },
     
     tooltip: {

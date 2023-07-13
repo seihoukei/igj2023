@@ -5,7 +5,7 @@ import path from "path"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
-  base: "/svelte-game/",
+  base: "/generator-igj2023/",
   resolve: {
     alias: {
       'components': path.resolve('./src/components'),
