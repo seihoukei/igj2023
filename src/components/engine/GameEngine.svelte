@@ -4,6 +4,7 @@
     import GameTimer from "utility/timer/GameTimer.svelte"
 
     import game from "stores/store-game.js"
+    import GameCore from "./GameCore.svelte"
 
     let state, gameId
 
@@ -46,6 +47,9 @@
 
 {#key gameId}
     {#if state}
+        <GameCore id="red" bind:core={state.red} />
+        <GameCore id="green" bind:core={state.green} />
+        <GameCore id="blue" bind:core={state.blue} />
 
         <GameSettings bind:settings={state.settings} />
         <GameTimer {milestoneFunction}

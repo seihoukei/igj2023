@@ -111,7 +111,7 @@
     }
 
     div.title {
-        font-size: 5em;
+        font-size: 3em;
     }
 
     div.saves {

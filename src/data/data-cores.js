@@ -1,7 +1,7 @@
 const CORES = {
     red: {
         name : "Redium",
-        angle : -2/3 * Math.PI,
+        angle : 101/120 * Math.PI,
         baseProperties : {
             tapCharge : 1,
             autoCharge : 0.5,
@@ -13,7 +13,7 @@ const CORES = {
     },
     green: {
         name : "Greon",
-        angle : 0,
+        angle : -1/2 * Math.PI,
         baseProperties: {
             tapCharge : 0.3,
             autoCharge : 0.1,
@@ -25,7 +25,7 @@ const CORES = {
     },
     blue : {
         name : "Bluite",
-        angle : 2/3 * Math.PI,
+        angle : 19/120 * Math.PI,
         baseProperties: {
             tapCharge : 0.1,
             autoCharge : 0.2,

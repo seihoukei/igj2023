@@ -15,4 +15,25 @@
     --ui-button-text-color: #CCCCCC;
 
     --ui-default-spacing: 1rem;
+
+    --ui-background : #000000;
+    --ui-border : #222222;
+}
+
+.core.red {
+    --core-dark: #550000;
+    --core-normal: #990000;
+    --core-light: #CC0000;
+}
+
+.core.green {
+    --core-dark: #004400;
+    --core-normal: #008800;
+    --core-light: #00BB00;
+}
+
+.core.blue {
+    --core-dark: #000055;
+    --core-normal: #000099;
+    --core-light: #0000CC;
 }
