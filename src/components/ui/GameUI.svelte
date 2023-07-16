@@ -4,6 +4,7 @@
     import UIDialogs from "utility/dialog/UIDialogs.svelte"
     import UIToolTip from "utility/tooltip/UIToolTip.svelte"
     import UIField from "./UIField.svelte"
+    import Dialogs from "utility/dialog/dialogs.js"
 
     $: state = $game?.state ?? null
 </script>
@@ -13,11 +14,14 @@
 {/if}
 
 {#if state}
-
     <div class="layout">
-        <div class="pad start"></div>
         <UIField />
-        <div class="pad end"></div>
+
+        <button class="top right"
+                on:click={() => Dialogs.open("menu")}
+        >
+            Menu
+        </button>
     </div>
 
     <UIDialogs />
@@ -43,34 +47,33 @@
         right : 0;
         bottom : 0;
 
+        font-size: calc(100vmin / 32);
+
         overflow: hidden;
 
         display: flex;
     }
 
-    div.pad {
-        flex-grow: 999;
+    button {
+        font-size: 1em;
+        position: absolute;
+        width: 8em;
+        height: 4em;
     }
 
-    div.pad.start {
-        background: linear-gradient(to left, var(--ui-border), var(--ui-background),  var(--ui-background));
+    button.top {
+        top : 0
     }
 
-    div.pad.end {
-        background: linear-gradient(to right, var(--ui-border), var(--ui-background),  var(--ui-background));
+    button.bottom {
+        bottom: 0;
     }
 
-    @media (max-aspect-ratio : 1/1) {
-        div.layout {
-            flex-direction: column;
-        }
+    button.left {
+        left : 0
+    }
 
-        div.pad.start {
-            background: linear-gradient(to top, var(--ui-border), var(--ui-background),  var(--ui-background));
-        }
-
-        div.pad.end {
-            background: linear-gradient(to bottom, var(--ui-border), var(--ui-background),  var(--ui-background));
-        }
+    button.right {
+        right : 0
     }
 </style>

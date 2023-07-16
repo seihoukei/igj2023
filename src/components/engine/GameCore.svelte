@@ -2,6 +2,7 @@
     import Portal from "svelte-portal"
     import CORES from "../../data/data-cores.js"
     import Trigger from "@seihoukei/trigger-svelte"
+    import DisplayString from "utility/display-string/display-string.js"
 
     export let id
     export let core = {
@@ -13,8 +14,8 @@
 
     const data = CORES[id]
 
-    const distance = 8
-    const size = 12
+    const distance = 9
+    const size = 13
     const x = 16 + distance * Math.cos(data.angle)
     const y = 16 + distance * Math.sin(data.angle)
 
@@ -48,7 +49,9 @@
          style={cssProperties}
          on:click={tapCharge}
     >
-        {core.value}
+        <div class="mass">
+            {DisplayString.number(core.value, DisplayString.NUMBER_FORMATS.SHORT)}
+        </div>
     </div>
 </Portal>
 
@@ -79,5 +82,9 @@
         justify-content: center;
 
         cursor: pointer;
+    }
+
+    div.mass {
+        font-size: 2em;
     }
 </style>

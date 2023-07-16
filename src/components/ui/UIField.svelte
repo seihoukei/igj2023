@@ -1,33 +1,22 @@
 <script>
 
-import Dialogs from "../../utility/dialog/dialogs.js"
 </script>
 
 <div class="field">
     <div id="cores">
 
     </div>
-
-    <button class="top right"
-            on:click={() => Dialogs.open("menu")}
-    >
-        Menu
-    </button>
-
+    <button class="left">↑ Energy ⇶ Reduim ↑</button>
+    <button class="right">↓ Bluite ⇶ Energy ↓</button>
 </div>
 
 <style>
     div.field {
         position: relative;
 
-        width : 100vmin;
-        height : 100vmin;
-
-        font-size: calc(100vmin / 32);
-
-        background: url("./resources/images/generator_bg.jpg");
-        background-size: cover;
-        overflow: hidden;
+        width : 32em;
+        height : 32em;
+        margin : auto;
     }
 
     div#cores {
@@ -41,23 +30,16 @@ import Dialogs from "../../utility/dialog/dialogs.js"
     button {
         font-size: 1em;
         position: absolute;
-        width: 8em;
-        height: 4em;
-    }
-
-    button.top {
-        top : 0
-    }
-
-    button.bottom {
-        bottom: 0;
+        width: 12em;
+        height: 2em;
+        bottom: 1em;
     }
 
     button.left {
-        left : 0
+        left : 2em;
     }
 
     button.right {
-        right : 0
+        right : 2em;
     }
 </style>

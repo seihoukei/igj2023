@@ -26,3 +26,8 @@ input {
   text-align: center;
   background-color: var(--ui-dialog-section-color);
 }
+
+button {
+  background-color: #000000;
+  color: #CCCCCC;
+}
